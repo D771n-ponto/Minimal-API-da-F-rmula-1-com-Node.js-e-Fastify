@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Fórmula 1 Grid</title>
+    <style>
+        body { font-family: sans-serif; background: #111; color: #fff; padding: 20px; }
+        .driver-card { background: #222; border-left: 5px solid #e10600; padding: 15px; margin: 10px 0; border-radius: 4px; }
+        h1 { color: #e10600; }
+    </style>
+</head>
+<body>
+
+    <h1>Pilotos da Fórmula 1</h1>
+    <div id="grid-pilotos">Carregando pilotos...</div>
+
+    <script>
+        // Faz a chamada para a API local que você criou!
+        fetch('http://localhost:3333/drivers')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('grid-pilotos');
+                container.innerHTML = ''; // Limpa o texto de carregando
+                
+                // Monta os cards na tela
+                data.forEach(piloto => {
+                    container.innerHTML += `
+                        <div class="driver-card">
+                            <h3>${piloto.name}</h3>
+                            <p>Equipe: <strong>${piloto.team}</strong></p>
+                        </div>
+                    `;
+                });
+            })
+            .catch(error => {
+                document.getElementById('grid-pilotos').innerText = 'Erro ao conectar com a API.';
+            });
+    </script>
+</body>
+</html>
