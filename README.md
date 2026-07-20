@@ -30,26 +30,16 @@ Ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
 
 Navegue até a pasta do projeto:
 
-Bash
-cd node-formula-1
+```bash
+cd Minimal-API-da-F-rmula-1-com-Node.js-e-Fastify
+
 Instale as dependências necessárias:
 
-Bash
 npm install
+
 Inicie o servidor backend:
 
-Bash
 npm start
-O servidor estará rodando em http://127.0.0.1:3333.
-
-Para visualizar o consumo no Frontend, basta abrir o arquivo index.html incluído no repositório.
-
-Desenvolvido por Danielle Costa durante a jornada no Bootcamp da DIO. 🏁
 
 
----
 
-### 💡 Última dica antes do commit:
-Crie também um arquivo simples chamado **`.gitignore`** na raiz da sua pasta e escreva apenas isto dentro dele:
-```text
-node_modules/
