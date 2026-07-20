@@ -41,5 +41,7 @@ Inicie o servidor backend:
 
 npm start
 
+O servidor estará rodando em http://127.0.0.1:3333.
 
+Para visualizar o consumo no Frontend, basta abrir o arquivo index.html incluído no repositório.
 
